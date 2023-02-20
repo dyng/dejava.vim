@@ -35,3 +35,8 @@ func! s:Decompile() abort
 endf
 
 com! DejavaThis call <SID>Decompile()
+
+augroup dejava
+    au!
+    au BufRead *.class call <SID>Decompile()
+augroup END
